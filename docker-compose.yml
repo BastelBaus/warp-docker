@@ -13,6 +13,7 @@ services:
     environment:
       - WARP_SLEEP=2
       # - WARP_LICENSE_KEY= # optional
+      # - TUNNEL_TOKEN= # optional, supperceeds WARP_LICENCE_KEY
     cap_add:
       # Docker already have them, these are for podman users
       - MKNOD
