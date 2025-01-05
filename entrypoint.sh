@@ -28,7 +28,7 @@ sleep "$WARP_SLEEP"
 if [ ! -f /var/lib/cloudflare-warp/reg.json ]; then
     # if a tunnel token has been specified, ust this to connect
     if [-n "$TUNNEL_TOKEN" ]; then
-        warp-cli connector new "$TUNNEL_TOKEN"
+        echo "y" | warp-cli connector new "$TUNNEL_TOKEN"
         echo "Warp connected with TUNNEL_TOKEN $TUNNEL_TOKEN"
     # if /var/lib/cloudflare-warp/mdm.xml not exists or REGISTER_WHEN_MDM_EXISTS not empty, register the warp client
     elif [ ! -f /var/lib/cloudflare-warp/mdm.xml ] || [ -n "$REGISTER_WHEN_MDM_EXISTS" ]; then
